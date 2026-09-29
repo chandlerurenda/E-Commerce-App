@@ -22,12 +22,12 @@ function renderBooks() {
     <div class="book__price">
       <span class="book__price--normal">$${book.originalPrice}</span> $${books[0].salePrice}
     </div>
-  </div>
-</div>`;
+  </div>`;
   })
   .join("");
 
- booksWrapper.innerHTML = booksHtml;
+booksWrapper.innerHTML = booksHtml;
+console.log(booksHtml);
 
 }
 
