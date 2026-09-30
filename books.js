@@ -10,8 +10,6 @@ function renderBooks(filter) {
     books.sort((a, b) => b.rating - a.rating);
   }
 
-}
-
 const booksHtml = 
 books.map((book) => {
     return `<div class="book">
@@ -30,8 +28,8 @@ books.map((book) => {
   </div>`;
   })
   .join("");
-
 booksWrapper.innerHTML = booksHtml;
+}
 
 function filterBooks(event) {
   renderBooks(event.target.value);
@@ -40,6 +38,7 @@ function filterBooks(event) {
 setTimeout(() => {
   renderBooks();
 });
+
 
 function ratingsHTML(rating) {
   let ratingHTML = "";
