@@ -464,16 +464,14 @@ select {
   font-size: 60px;
   color: #7342d6;
 }
-
 .books__loading--spinner {
   display: none !important;
 }
-
 .books__loading .books__loading--spinner {
   display: block !important;
 }
 
-.fa-spinner {
+/* .fa-spinner {
   animation: rotate 600ms infinite linear;
 }
 
@@ -485,7 +483,7 @@ select {
   100% {
     transform: rotate(360deg);
   }
-}
+} */
 
 /* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
 @media (max-width: 768px) {
