@@ -5,6 +5,8 @@ function renderBooks(filter) {
 
  if (filter === 'LOW_TO_HIGH') {
     console.log(filter)
+    const filteredBooks = books.sort((a, b) => (a.originalPrice) - (b.originalPrice));
+    console.log(filteredBooks)
  }
 
   const booksHtml = books
@@ -37,7 +39,7 @@ function filterBooks(event) {
     renderBooks(event.target.value);
   }
 
-setTimeout(() => {
+setTimeout(() => { 
   renderBooks();
 });
 
