@@ -10,9 +10,9 @@ function renderBooks(filter) {
     books.sort((a, b) => b.rating - a.rating);
   }
 
-const booksHtml = 
-books.map((book) => {
-    return `<div class="book">
+  const booksHtml = books
+    .map((book) => {
+      return `<div class="book">
     <figure class="book__img--wrapper">
       <img class="book__img" src="${book.url}"
         alt="">
@@ -26,9 +26,9 @@ books.map((book) => {
       <span class="book__price--normal">$${book.originalPrice.toFixed(2)}</span>
     </div>
   </div>`;
-  })
-  .join("");
-booksWrapper.innerHTML = booksHtml;
+    })
+    .join("");
+  booksWrapper.innerHTML = booksHtml;
 }
 
 function filterBooks(event) {
@@ -39,7 +39,6 @@ setTimeout(() => {
   renderBooks();
 });
 
-
 function ratingsHTML(rating) {
   let ratingHTML = "";
   for (let i = 0; i < Math.floor(rating); ++i) {
@@ -49,9 +48,8 @@ function ratingsHTML(rating) {
   if (!Number.isInteger(rating)) {
     ratingHTML += '<i class="fas fa-star-half-alt"></i>';
   }
-  return ratingsHTML;
+  return ratingHTML;
 }
-
 
 // FAKE DATA
 function getBooks() {
